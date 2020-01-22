@@ -42,6 +42,9 @@ INSTALLED_APPS = [
     #app
     'pontos_turisticos',
     'atracoes',
+    'comentarios',
+    'avaliacoes',
+    'enderecos',
 ]
 
 MIDDLEWARE = [
