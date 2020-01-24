@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     #libs
     'rest_framework',
-    'django_filters'
+    'django_filters',
+    'corsheaders',
     #app
     'pontos_turisticos',
     'atracoes',
@@ -56,7 +57,17 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
 ]
+CORS_ORIGIN_ALLOW_ALL = True
+CORS_ALLOW_CREDENTIALS = True
+CORS_ORIGIN_WHITELIST = [
+    'http://localhost:8000',
+]
+CORS_ORIGIN_REGEX_WHITELIST = [
+    'http://localhost:8000',
+]
+
 
 ROOT_URLCONF = 'projeto_pontos_turisticos.urls'
 
